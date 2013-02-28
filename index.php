@@ -45,7 +45,7 @@ $label = 'View Source';
 <form onsubmit="location='./'+this.url.value;return false;">
 	<h1><?php print($title); ?></h1>
 	<a id="bookmarklet" href="javascript:location='http://viewsource.in/'+location;" title="Ahoy! Drag me into your bookmarks!"><span>View Source</span></a>
-	<input type="url" id="url" name="url" placeholder="http://">
+	<input type="url" id="url" name="url" placeholder="http://" onchange="this.value=/^(f|ht)tps*:/.test(this.value)?this.value:'http://'+this.value">
 	<input type="submit" id="submit" value="<?php print($label); ?>">
 </form>
 
