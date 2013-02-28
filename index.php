@@ -37,6 +37,8 @@ $label = 'View Source';
 ?>
 <!doctype html public "Yo dawg, we heard you like viewing the source, so we put our source in the source so you can view source while you view source.">
 <title><?php print($title); ?></title>
+<meta name="description" content="Share the source of anything on the www.">
+<meta property="og:image" content="http://viewsource.in/favicon.png">
 <link rel="stylesheet" href="<?php print($dir.'/style.css'); ?>">
 <script>document.write("<meta name=viewport content=width=device-"+(this.orientation ? "height" : "width")+">");</script>
 
