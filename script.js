@@ -31,8 +31,8 @@ function onPointerStart(event) {
 
 function onPointerMove(event) {
 	var
-	node = document.elementFromPoint(event.pageX, event.pageY),
-	line = node.parentNode && node.parentNode.className == "gutter" && node.firstChild.nodeValue || 0,
+	node = document.elementFromPoint(event.clientX || (event.pageX - window.pageXOffset), event.clientY || (event.pageY - window.pageYOffset)),
+	line = node && node.parentNode && node.parentNode.className == "gutter" && node.firstChild.nodeValue || 0,
 	keep = (event.shiftKey || /move/.test(event.type)) && onPointerMove.line;
 
 	if (line && line != onPointerMove.line) {
