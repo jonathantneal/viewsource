@@ -1,7 +1,7 @@
 * { font-size: 100%; margin: 0; padding: 0; vertical-align: top; }
-html { font-family: sans-serif; }
+html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 h1, form { text-align: center; }
-h1 { font: 3.75em/1 "Press Start 2P"; margin: 2em 0 0.75em; }
+h1 { color: #222; font: 3.75em/1 "Press Start 2P"; margin: 2em 0 0.75em; }
 table { overflow: hidden; table-layout: fixed; width: 100%; }
 
 #bookmarklet { background-color: #EEE; border: 1px solid #CCC; border-radius: 0.25em; color: #333; font-size: 75%; left: 0.5em; padding: 0.75em 1em; position: absolute; text-decoration: none; text-shadow: 0 1px 0 #F9F9F9; top: 0.5em; }
@@ -34,3 +34,17 @@ pre, .syntaxhighlighter { font: 12px/1.4 Consolas, "Liberation Mono", Courier, m
 
 .code a { color: #55F; text-decoration: none; }
 .code a:focus, .code a:hover { text-decoration: underline; }
+
+@media (max-width: 38em) {
+	h1 { font-size: 1.75em; margin: 1em 0; }
+
+	#bookmarklet { display: none; }
+
+	#url:focus, #submit:active, #submit:focus { margin-top: 0; }
+
+	#url { box-sizing: border-box; margin: 1em 0; width: 90%; }
+
+	#submit { -webkit-appearance: none; }
+
+	.code .line { float: none; }
+}

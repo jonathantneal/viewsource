@@ -19,23 +19,42 @@ function onHashChange() {
 	});
 }
 
-// Click event
-function onClick(event) {
-	var
-	line = event.target.parentNode && event.target.parentNode.className == "gutter" && event.target.firstChild.nodeValue || 0,
-	keep = event.shiftKey && onClick.line;
+// Assign pointer events
+function onPointerStart(event) {
+	onPointerMove(event);
 
-	if (line) {
+	window.addEventListener("mousemove", onPointerMove);
+	window.addEventListener("touchmove", onPointerMove);
+	window.addEventListener("mouseup", onPointerEnd);
+	window.addEventListener("touchend", onPointerEnd);
+}
+
+function onPointerMove(event) {
+	var
+	node = document.elementFromPoint(event.pageX, event.pageY),
+	line = node.parentNode && node.parentNode.className == "gutter" && node.firstChild.nodeValue || 0,
+	keep = (event.shiftKey || /move/.test(event.type)) && onPointerMove.line;
+
+	if (line && line != onPointerMove.line) {
 		event.preventDefault();
 
-		location.hash = "L" + (keep ? Math.min(onClick.line, line)+"-"+Math.max(onClick.line, line) : line);
+		location.hash = "L" + (keep ? Math.min(onPointerMove.line, line)+"-"+Math.max(onPointerMove.line, line) : line);
 
-		onClick.line = keep ? onClick.line : line;
+		onPointerMove.line = keep ? onPointerMove.line : line;
 	}
 }
-onClick.line = 0;
+onPointerMove.line = 0;
 
-window.addEventListener("click", onClick);
+function onPointerEnd(event) {
+	window.removeEventListener("mousemove", onPointerMove);
+	window.removeEventListener("touchmove", onPointerMove);
+	window.removeEventListener("mouseup", onPointerEnd);
+	window.removeEventListener("touchend", onPointerEnd);
+}
+
+// Initialize all events
+window.addEventListener("mousedown", onPointerStart);
+window.addEventListener("touchstart", onPointerStart);
 window.addEventListener("hashchange", onHashChange);
 window.addEventListener("DOMContentLoaded", onHashChange);
 window.addEventListener("DOMContentLoaded", function () {
