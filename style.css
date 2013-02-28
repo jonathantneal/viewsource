@@ -22,7 +22,7 @@ pre, .syntaxhighlighter { font: 12px/1.4 Consolas, "Liberation Mono", Courier, m
 .code { color: #333; }
 .code .container { overflow-x: scroll; }
 
-.line { white-space: nowrap; }
+.line { -moz-box-sizing: border-box; box-sizing: border-box; white-space: nowrap; }
 .gutter .line { cursor: pointer; padding: 0 6px; text-align: right; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; }
 .code .line { padding-left: 10px; white-space: nowrap; float: left; min-width: 100%; }
 
@@ -42,7 +42,7 @@ pre, .syntaxhighlighter { font: 12px/1.4 Consolas, "Liberation Mono", Courier, m
 
 	#url:focus, #submit:active, #submit:focus { margin-top: 0; }
 
-	#url { box-sizing: border-box; margin: 1em 0; width: 90%; }
+	#url { -moz-box-sizing: border-box; box-sizing: border-box; margin: 1em 0; width: 90%; }
 
 	#submit { -webkit-appearance: none; }
 
