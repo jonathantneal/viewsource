@@ -11,6 +11,10 @@ $url_isset = $url != 'http://';
 
 $url_extension = pathinfo($url, PATHINFO_EXTENSION);
 
+if (preg_match('/^http:\/\/viewsource\.in/', $url)) {
+	header('Location: https://github.com/jonathantneal/viewsource');
+}
+
 // brush url (for Syntax Highlighter)
 $brush_url = '//alexgorbatchev.com/pub/sh/current/';
 
@@ -31,7 +35,7 @@ $title = 'viewsource'.($url_isset ? ': '.$url : '');
 $label = 'View Source';
 
 ?>
-<!doctype html public "Yo dawg, we heard you like viewing the source, so we put our source in the source so you can view the source while you view source.">
+<!doctype html public "Yo dawg, we heard you like viewing the source, so we put our source in the source so you can view source while you view source.">
 <title><?php print($title); ?></title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="<?php print($dir.'/style.css'); ?>">
