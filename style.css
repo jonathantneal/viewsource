@@ -14,7 +14,7 @@ table { overflow: hidden; table-layout: fixed; width: 100%; }
 #url { width: 25em; }
 #submit { background: #a84141; border-bottom-color: #331515; border-left-color: #4D1F1F; border-right-color: #4D1F1F; border-top-color: #8C3838; color: #FFF; cursor: pointer; text-align: center; text-shadow: 0px -1px 1px #1E2D4D; }
 
-.syntaxhighlighter { font: 12px/1.4 Consolas, "Liberation Mono", Courier, monospace; }
+pre, .syntaxhighlighter { font: 12px/1.4 Consolas, "Liberation Mono", Courier, monospace; }
 
 .gutter, .code { padding: 10px 0; }
 
