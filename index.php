@@ -31,7 +31,7 @@ $title = 'viewsource'.($url_isset ? ': '.$url : '');
 $label = 'View Source';
 
 ?>
-<!doctype html>
+<!doctype html public "Yo dawg, we heard you like viewing the source, so we put our source in the source so you can view the source while you view source.">
 <title><?php print($title); ?></title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="<?php print($dir.'/style.css'); ?>">
