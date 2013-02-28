@@ -45,7 +45,7 @@ $label = 'View Source';
 <form onsubmit="location='./'+this.url.value;return false;">
 	<h1><?php print($title); ?></h1>
 	<a href="javascript:location='http://viewsource.in/'+location;" id="bookmarklet"><span>View Source</span></a>
-	<input type="url" id="url" name="url" placeholder="http://" onchange="this.value=/^(f|ht)tps*:/.test(this.value)?this.value:'http://'+this.value">
+	<input type="url" name="url" id="url" placeholder="http://" onchange="this.value=/^(f|ht)tps*:/.test(this.value)?this.value:'http://'+this.value" autofocus>
 	<input type="submit" id="submit" value="<?php print($label); ?>">
 </form>
 
