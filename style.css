@@ -1,0 +1,36 @@
+* { font-size: 100%; margin: 0; padding: 0; vertical-align: top; }
+html { font-family: sans-serif; }
+h1, form { text-align: center; }
+h1 { font: 64px/1 "Press Start 2P"; margin: 2em 0 0.75em; }
+table { overflow: hidden; table-layout: fixed; width: 100%; }
+
+#bookmarklet { background-color: #EEE; border: 1px solid #CCC; border-radius: 0.25em; color: #333; font-size: 75%; left: 0.5em; padding: 0.75em 1em; position: absolute; text-decoration: none; text-shadow: 0 1px 0 #F9F9F9; top: 0.5em; }
+#bookmarklet:after { content: "Drag me into your bookmarks!"; }
+#bookmarklet span { font-size: 0; }
+
+#url, #submit { border: 1px solid #331515; border-radius: 0.125em; box-shadow: inset 0 1px 10px 1px #DB5656, 0px 1px 0 #4D1D1D, 0 6px 0px #541F1F, 0 8px 4px 1px #111; margin: 0 0.25em; outline: 0; padding: 1em; }
+#url:focus, #submit:active, #submit:focus { box-shadow: inset 0 1px 10px 1px #555, 0 1px 0 #1D2C4D, 0 2px 0 #1F3053, 0 4px 3px 0 #111; margin-top: 0.2em; }
+
+#url { width: 25em; }
+#submit { background: #a84141; border-bottom-color: #331515; border-left-color: #4D1F1F; border-right-color: #4D1F1F; border-top-color: #8C3838; color: #FFF; cursor: pointer; text-align: center; text-shadow: 0px -1px 1px #1E2D4D; }
+
+.syntaxhighlighter { font: 12px/1.4 Consolas, "Liberation Mono", Courier, monospace; }
+
+.gutter, .code { padding: 10px 0; }
+
+.gutter { background: #ECECEC; border-right: 1px solid #DDD; color: #AAA; width: 40px; }
+.code { color: #333; }
+.code .container { overflow-x: scroll; }
+
+.line { white-space: nowrap; }
+.gutter .line { cursor: pointer; padding: 0 6px; text-align: right; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; }
+.code .line { padding-left: 10px; white-space: nowrap; float: left; min-width: 100%; }
+
+.code .comments { color: #999988; font-style: italic; }
+.code .color1 { color: #008080; }
+.code .highlighted { background-color: #FFC; }
+.code .keyword { color: #000080; }
+.code .string { color: #D14; }
+
+.code a { color: #55F; text-decoration: none; }
+.code a:focus, .code a:hover { text-decoration: underline; }
