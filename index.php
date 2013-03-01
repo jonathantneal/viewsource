@@ -54,7 +54,7 @@ $label = 'View Source';
 <?php else: ?>
 <script src="<?php print($brush_url.'/scripts/shCore.js'); ?>"></script>
 <script src="<?php print($brush_url.'/scripts/shBrush'.$brush.'.js'); ?>"></script>
-<pre id="source" class="<?php print('brush:'.$brush_lowercase.';gutter:true;toolbar:false;quick-code:false;'); ?>"><?php
+<pre id="source" class="<?php print('brush:'.$brush_lowercase); ?>"><?php
 
 // create a new cURL resource handle
 $ch = curl_init();

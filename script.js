@@ -3,7 +3,11 @@ iframe = document.createElement("iframe");
 source = document.getElementById("source");
 
 // Syntax Highlight
-SyntaxHighlighter.highlight({}, source);
+SyntaxHighlighter.highlight({
+	"gutter": true,
+	"toolbar": false,
+	"quick-code": false
+}, source);
 
 // Key event
 function onKeyPress(event) {
