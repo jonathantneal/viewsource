@@ -85,5 +85,6 @@ print($source);
 
 ?></pre>
 
+<script>url="<? print($url); ?>"</script>
 <script src="<?php print($dir.'/script.js'); ?>"></script>
 <? endif; ?>

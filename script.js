@@ -1,8 +1,29 @@
+// Nodes
+iframe = document.createElement("iframe");
+source = document.getElementById("source");
+
 // Syntax Highlight
-SyntaxHighlighter.highlight({}, document.getElementById("source"));
+SyntaxHighlighter.highlight({}, source);
+
+// Key event
+function onKeyPress(event) {
+	if (event.charCode == 114) {
+		if (onKeyPress.toggle) {
+			iframe.parentNode ? document.body.removeChild(iframe) : (document.body.appendChild(iframe), iframe.contentDocument.baseURL = url, iframe.contentDocument.write(source.textContent));
+		} else {
+			onKeyPress.toggle = true;
+
+			setTimeout(function () {
+				onKeyPress.toggle = false;
+			}, 300);
+		}
+	}
+}
+
+onKeyPress.toggle = false;
 
 // Hash event
-function onHashChange() {
+function onHashChange(event) {
 	Array.prototype.forEach.call(document.querySelectorAll(".highlighted"), function (element) {
 		element.classList.remove("highlighted");
 	});
@@ -21,6 +42,10 @@ function onHashChange() {
 
 // Assign pointer events
 function onPointerStart(event) {
+	if (iframe.parentNode) {
+		return document.body.removeChild(iframe);
+	}
+
 	onPointerMove(event);
 
 	window.addEventListener("mousemove", onPointerMove);
@@ -53,6 +78,7 @@ function onPointerEnd(event) {
 }
 
 // Initialize all events
+window.addEventListener("keypress", onKeyPress);
 window.addEventListener("mousedown", onPointerStart);
 window.addEventListener("touchstart", onPointerStart);
 window.addEventListener("hashchange", onHashChange);
