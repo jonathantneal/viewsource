@@ -21,7 +21,7 @@ pre, .syntaxhighlighter { font: 12px/1.4 Consolas, "Liberation Mono", Courier, m
 
 .gutter { background: #ECECEC; border-right: 1px solid #DDD; color: #AAA; width: 40px; }
 .code { color: #333; }
-.code .container { overflow-x: scroll; }
+.code .container { overflow-x: scroll; -webkit-overflow-scrolling: touch; }
 
 .line { -moz-box-sizing: border-box; box-sizing: border-box; white-space: nowrap; }
 .gutter .line { cursor: pointer; padding: 0 6px; text-align: right; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; }
