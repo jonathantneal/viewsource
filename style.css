@@ -3,7 +3,7 @@ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-ad
 h1, form { text-align: center; }
 h1 { color: #222; font: 3.75em/1 "Press Start 2P"; margin: 2em 0 0.75em; }
 table { overflow: hidden; table-layout: fixed; width: 100%; }
-iframe { bottom: 0; height: 100%; left: 40px; position: fixed; right: 0; top: 0; width: 100%; }
+iframe { background-color: #FFF; bottom: 0; color: #000; height: 100%; left: 40px; position: fixed; right: 0; top: 0; width: 100%; z-index: 1; }
 
 #bookmarklet { background-color: #EEE; border: 1px solid #CCC; border-radius: 0.25em; color: #333; font-size: 75%; left: 0.5em; padding: 0.75em 1em; position: absolute; text-decoration: none; text-shadow: 0 1px 0 #F9F9F9; top: 0.5em; }
 #bookmarklet:after { content: "Drag me into your bookmarks!"; }
