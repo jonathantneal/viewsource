@@ -13,7 +13,7 @@ SyntaxHighlighter.highlight({
 function onKeyPress(event) {
 	if (event.charCode == 114) {
 		if (onKeyPress.toggle) {
-			iframe.parentNode ? document.body.removeChild(iframe) : (document.body.appendChild(iframe), iframe.contentDocument.baseURL = url, iframe.contentDocument.write(source.textContent));
+			iframe.parentNode ? document.body.removeChild(iframe) : (document.body.appendChild(iframe), iframe.contentDocument.write("<base href="+url+">"+source.textContent));
 		} else {
 			onKeyPress.toggle = true;
 
