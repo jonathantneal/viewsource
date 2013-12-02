@@ -74,6 +74,9 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 // Follow redirects
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
+// Enable decoding of the response
+curl_setopt($ch, CURLOPT_ENCODING, '');
+
 // Timeout in seconds
 curl_setopt($ch, CURLOPT_TIMEOUT, 3);
 
